@@ -86,7 +86,8 @@ struct ContentView: View {
                         .offset(y: currentTab == tab ? -15 : 0)
                 }
             })
-        }.frame(height: UIScreen.main.bounds.width * 0.075)
+        }.frame(height: UIScreen.main.bounds.width * 0.08)
+        
     }
 }
 
