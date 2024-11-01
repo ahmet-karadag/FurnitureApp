@@ -27,7 +27,9 @@ struct ProductCardView: View {
                         .font(.caption)
                         .padding(.vertical, 15)
                     Text("$ \(product.price)")
+                        .foregroundColor(.black)
                         .bold()
+                        .padding(.bottom,10)
                 }
                 Button (action: {
                     cartManager.addToCart(product)

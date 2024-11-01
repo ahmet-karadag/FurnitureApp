@@ -18,7 +18,7 @@ struct ImageSliderView: View {
                 Image(slides[currentIndex])
                     .resizable()
                     .scaledToFit()
-                    .frame(width: .infinity, height: 180 )
+                    .frame(width: .none, height: 180 )
                     .cornerRadius(15)
                     
                  

@@ -18,10 +18,8 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $currentTab){
-            Text("Home View")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background()
-                .tag(Tab.home)
+            HomePageView()
+                .environmentObject(cartManager)
             Text("Search View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()

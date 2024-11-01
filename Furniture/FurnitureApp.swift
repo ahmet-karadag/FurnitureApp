@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct FurnitureApp: App {
+    @EnvironmentObject var cartManager: CartManager
     var body: some Scene {
         WindowGroup {
             ContentView()
