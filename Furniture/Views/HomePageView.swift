@@ -29,6 +29,7 @@ struct HomePageView: View {
                         
                     }
                     .padding()
+                    //showindicators kaydırma çubuğunun gösterilip gösterilmeyeceğini belirtir.
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 15){
                             ForEach(productList, id: \.id){ product in
@@ -39,6 +40,8 @@ struct HomePageView: View {
                                 }
                             }
                         }.padding(.horizontal)
+                        
+                            
                     }
                 }
             }

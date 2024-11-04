@@ -39,7 +39,7 @@ struct ProductCardView: View {
                         .foregroundColor(Color("kPrimary"))
                         .frame(width: 45 , height: 45)
                         .padding(.trailing)
-                })
+                }).padding()
             }
         }.frame(width: 180, height:265)
             .cornerRadius(20)
