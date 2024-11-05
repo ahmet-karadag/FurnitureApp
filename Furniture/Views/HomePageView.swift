@@ -24,9 +24,12 @@ struct HomePageView: View {
                             .font(.title2)
                             .fontWeight(.medium)
                         Spacer()
-                        Image(systemName: "circle.grid.2x2")
-                            .foregroundColor(Color("kPrimary"))
-                        
+                        NavigationLink(destination: {
+                            ProductView()
+                        }, label: {
+                            Image(systemName: "circle.grid.2x2")
+                                .foregroundColor(Color("kPrimary"))
+                        })
                     }
                     .padding()
                     //showindicators kaydırma çubuğunun gösterilip gösterilmeyeceğini belirtir.
@@ -34,9 +37,10 @@ struct HomePageView: View {
                         HStack(spacing: 15){
                             ForEach(productList, id: \.id){ product in
                                 NavigationLink{
-                                    Text(product.name)
+                                    ProductDetailsView(product: product)
                                 } label:{
                                     ProductCardView(product: product)
+                                        .environmentObject(cartManager)
                                 }
                             }
                         }.padding(.horizontal)
